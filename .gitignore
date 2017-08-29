@@ -1,0 +1,6 @@
+.tmp
+npm-debug.log
+npm-error.log
+node_modules
+publish.sh
+dist

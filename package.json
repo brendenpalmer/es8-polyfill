@@ -1,0 +1,29 @@
+{
+  "name": "es8-polyfill",
+  "version": "0.1.0",
+  "description":
+    "Contains all polyfills needed for features added in ECMAScript 2017",
+  "main": "index.js",
+  "repository": "https://github.com/brendenpalmer/es8-polyfill",
+  "author": "Brenden Palmer <brendenpalmer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp --prod",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "prettier": "./prettier.sh"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.2.3",
+    "gulp": "^3.9.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-util": "^3.0.8",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.6.1",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.4.0",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "yargs": "^8.0.2"
+  },
+  "pre-commit": ["lint", "prettier", "build"]
+}

@@ -914,6 +914,7 @@ img { max-width: 100%; }
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
+			<p><img src="https://travis-ci.org/brendenpalmer/es8-polyfill.svg?branch=master" alt="Build status" title="Build status"></p>
 			<h1 id="es8-polyfill">ES8 Polyfill</h1>
 			<ul>
 				<li>Polyfill to include the following ES8 features:<ul>
@@ -927,15 +928,20 @@ img { max-width: 100%; }
 			<h2 id="usage">Usage</h2>
 			<p>If you&#39;re interested in contributing, see the <a href="https://github.com/brendenpalmer/es8-polyfill#contributing">Contributing</a> section below. Otherwise, install this package via npm: <a href="https://www.npmjs.com/package/es8-polyfill">es8-polyfill</a>.</p>
 			<p>To include all polyfills:</p>
-			<pre><code><span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">'es8-polyfill'</span>)</span></span>
-</code></pre><p>To include only String polyfills:</p>
-			<pre><code><span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">'es8-polyfill/lib/string'</span>)</span></span>
-</code></pre><p>To include only Object polyfills:</p>
-			<pre><code><span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">'es8-polyfill/lib/object'</span>)</span></span>
-</code></pre><p>To access helper functions directly:</p>
-			<pre><code><span class="hljs-keyword">const</span> { padEnd, padStart } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/helpers/string'</span>)
-</code></pre><pre><code><span class="hljs-keyword">const</span> { entries, values } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/helpers/object'</span>)
-</code></pre><h2 id="installation">Installation</h2>
+			<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill'</span>)
+</code></pre>
+			<p>To include only String polyfills:</p>
+			<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/string'</span>)
+</code></pre>
+			<p>To include only Object polyfills:</p>
+			<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/object'</span>)
+</code></pre>
+			<p>To access helper functions directly:</p>
+			<pre><code class="lang-js"><span class="hljs-keyword">const</span> { padEnd, padStart } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/helpers/string'</span>)
+</code></pre>
+			<pre><code class="lang-js"><span class="hljs-keyword">const</span> { entries, values } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'es8-polyfill/lib/helpers/object'</span>)
+</code></pre>
+			<h2 id="installation">Installation</h2>
 			<p>Ensure that Node, npm, and yarn are installed.</p>
 			<p>Then, install gulp globally:</p>
 			<pre><code>npm <span class="hljs-keyword">install</span> -g gulp

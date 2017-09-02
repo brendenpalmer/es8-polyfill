@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.org/brendenpalmer/es8-polyfill.svg?branch=master "Build status")
+
 # ES8 Polyfill
 
 * Polyfill to include the following ES8 features:

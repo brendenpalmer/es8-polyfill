@@ -2,5 +2,6 @@
 npm-debug.log
 npm-error.log
 node_modules
+coverage
 publish.sh
-dist
+yarn-error.log

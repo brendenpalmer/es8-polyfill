@@ -1,10 +1,10 @@
 import { GlobalUtility } from './../common/utils/global-util';
 import { ObjectUtility } from './../common/utils/object-util';
-import { values } from './../helpers/object/values';
+import { entries } from './../helpers/object/entries';
 
 export function includePolyfill(): void {
-  if (!ObjectUtility.get(GlobalUtility.global, 'Object.values')) {
-    GlobalUtility.global.Object.values = values;
+  if (!ObjectUtility.get(GlobalUtility.global, 'Object.entries')) {
+    GlobalUtility.global.Object.entries = entries;
   }
 }
 

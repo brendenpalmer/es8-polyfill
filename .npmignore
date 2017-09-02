@@ -1,0 +1,15 @@
+.tmp
+npm-debug.log
+npm-error.log
+node_modules
+coverage
+publish.sh
+yarn-error.log
+prettier.sh
+.prettierrc
+webpack.config.js
+tslint.json
+src
+gulp
+gulpfile.js
+karma.conf.js

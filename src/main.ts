@@ -1,3 +1,2 @@
-import { ObjectValuesPolyfill } from './object/values';
-
-new ObjectValuesPolyfill().init();
+import './object';
+import './string';

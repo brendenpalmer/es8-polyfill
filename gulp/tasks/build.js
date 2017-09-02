@@ -1,21 +1,13 @@
 'use strict';
 
 const gulp = require('gulp');
-const gutil = require('gulp-util');
-const webpack = require('webpack');
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('./tsconfig.json');
 
-gulp.task('build', callback => {
-  // run webpack
-  webpack(require('../../webpack.config'), function(err, stats) {
-    if (err) throw new gutil.PluginError('webpack', err);
-    gutil.log(
-      '[webpack]',
-      stats.toString(
-        {
-          // output options
-        }
-      )
-    );
-    callback();
-  });
+gulp.task('build', () => {
+  const tsResult = gulp
+    .src(['src/**/*.ts', '!src/**/*.spec.ts'])
+    .pipe(tsProject());
+
+  return tsResult.js.pipe(gulp.dest('lib'));
 });

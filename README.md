@@ -12,29 +12,29 @@ If you're interested in contributing, see the [Contributing](https://github.com/
 
 To include all polyfills:
 
-```
+```js
 require('es8-polyfill')
 ```
 
 To include only String polyfills:
 
-```
+```js
 require('es8-polyfill/lib/string')
 ```
 
 To include only Object polyfills:
 
-```
+```js
 require('es8-polyfill/lib/object')
 ```
 
 To access helper functions directly:
 
-```
+```js
 const { padEnd, padStart } = require('es8-polyfill/lib/helpers/string')
 ```
 
-```
+```js
 const { entries, values } = require('es8-polyfill/lib/helpers/object')
 ```
 
@@ -44,17 +44,17 @@ Ensure that Node, npm, and yarn are installed.
 
 Then, install gulp globally:
 
-```
+```js
 npm install -g gulp
 ```
 
-```
+```js
 git clone https://github.com/brendenpalmer/es8-polyfill.git
 ```
 
 Finally, install all development dependencies:
 
-```
+```js
 cd es8-polyfill
 yarn
 ```

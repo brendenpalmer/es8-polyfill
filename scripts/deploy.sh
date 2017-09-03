@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset
 
-if [[ ${TRAVIS_PULL_REQUEST} != "false" ]]
+if [ ${TRAVIS_PULL_REQUEST} != "false" ]
 then
   echo "Skipping deploy because this is a PR build."
   exit 0

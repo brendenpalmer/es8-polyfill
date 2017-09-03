@@ -16,6 +16,7 @@ fi
 
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
+git checkout -b ${TRAVIS_BRANCH}
 git commit --no-verify -a --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
 git remote add origin-es8-polyfill https://${GH_TOKEN}@github.com/brendenpalmer/es8-polyfill.git > /dev/null 2>&1
 git push --quiet --set-upstream origin-es8-polyfill ${TRAVIS_BRANCH}

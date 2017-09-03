@@ -14,7 +14,7 @@ then
   exit 0
 fi
 
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git config user.email "travis@travis-ci.org"
 git config user.name "Travis CI"
 git remote add origin-es8-polyfill https://${GH_TOKEN}@github.com/brendenpalmer/es8-polyfill.git > /dev/null 2>&1
 git fetch

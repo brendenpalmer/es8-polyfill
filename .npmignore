@@ -3,11 +3,10 @@ npm-debug.log
 npm-error.log
 node_modules
 coverage
-scripts/publish.sh
 yarn-error.log
-prettier.sh
+scripts
 .prettierrc
-webpack.config.js
+.travis.yml
 tslint.json
 src
 gulp

@@ -14,10 +14,11 @@ then
   exit 0
 fi
 
+git status
 git add lib/\*
 git add docs/\*
 git commit --no-verify --message "Travis build $TRAVIS_BUILD_NUMBER"
 git remote add origin-es8-polyfill https://${GH_TOKEN}@github.com/brendenpalmer/es8-polyfill.git > /dev/null 2>&1
-git push origin-es8-polyfill ${TRAVIS_BRANCH}
+git push --quiet --set-upstream origin-es8-polyfill ${TRAVIS_BRANCH}
 
 echo "TRAVIS BRANCH: $TRAVIS_BRANCH"

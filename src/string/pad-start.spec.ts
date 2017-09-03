@@ -1,4 +1,5 @@
-import * as module from './../helpers/string/pad-start';
+import * as padStartModule from './../helpers/string/pad-start';
+import { includePolyfill } from './pad-start';
 
 describe('padStart', () => {
   let prevPadStart;
@@ -12,16 +13,15 @@ describe('padStart', () => {
     (String.prototype as any).padStart = prevPadStart;
   });
 
-  it('should be polyfilled correctly if it does not exist', async () => {
-    const padStartImport = await import('./pad-start');
-    padStartImport.includePolyfill();
+  it('should be polyfilled correctly if it does not exist', () => {
+    includePolyfill();
     expect((String.prototype as any).padStart).toEqual(jasmine.any(Function));
 
-    spyOn(module, 'padStart').and.callThrough();
+    spyOn(padStartModule, 'padStart').and.callThrough();
     const str: any = 'test';
 
     str.padStart(5, 'a');
 
-    expect(module.padStart).toHaveBeenCalledWith(str, 5, 'a');
+    expect(padStartModule.padStart).toHaveBeenCalledWith(str, 5, 'a');
   });
 });

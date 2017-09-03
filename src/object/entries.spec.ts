@@ -1,4 +1,5 @@
 import { entries } from './../helpers/object/entries';
+import { includePolyfill } from './entries';
 
 describe('entries', () => {
   let prevEntries;
@@ -12,9 +13,8 @@ describe('entries', () => {
     (Object as any).entries = prevEntries;
   });
 
-  it('should be polyfilled correctly if it does not exist', async () => {
-    const entriesImport = await import('./entries');
-    entriesImport.includePolyfill();
+  it('should be polyfilled correctly if it does not exist', () => {
+    includePolyfill();
     expect((Object as any).entries).toEqual(entries);
   });
 });

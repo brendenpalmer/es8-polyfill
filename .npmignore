@@ -3,7 +3,7 @@ npm-debug.log
 npm-error.log
 node_modules
 coverage
-publish.sh
+scripts/publish.sh
 yarn-error.log
 prettier.sh
 .prettierrc

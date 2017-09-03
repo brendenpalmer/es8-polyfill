@@ -9,3 +9,9 @@ script: gulp --prod
 
 matrix:
   fast_finish: true
+
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: travis-ci

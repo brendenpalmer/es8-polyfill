@@ -9,11 +9,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp --prod",
-    "prettier": "./prettier.sh",
+    "prettier": "./scripts/prettier.sh",
     "lint": "gulp lint",
     "test": "gulp test",
     "docs": "gulp docs",
-    "pre-commit": "./pre-commit.sh"
+    "pre-commit": "./scripts/pre-commit.sh"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.54",

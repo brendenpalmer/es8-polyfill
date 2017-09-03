@@ -17,4 +17,6 @@ fi
 git add lib/\*
 git add docs/\*
 git commit --message "Travis build $TRAVIS_BUILD_NUMBER"
-git push origin
+git push origin ${$TRAVIS_BRANCH}
+
+echo "TRAVIS BRANCH: $TRAVIS_BRANCH"

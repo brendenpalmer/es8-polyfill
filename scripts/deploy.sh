@@ -8,7 +8,7 @@ then
   exit 0
 fi
 
-if [ ${TRAVIS_BRANCH} != "travis-ci" ]
+if [ ${TRAVIS_BRANCH} != "master" ]
 then
   echo "This commit was made against $TRAVIS_BRANCH. We only deploy on master."
   exit 0

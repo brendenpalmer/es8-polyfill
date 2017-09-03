@@ -8,9 +8,9 @@ then
   exit 0
 fi
 
-if [ ${TRAVIS_BRANCH} != "travis-ci" ]
+if [ ${TRAVIS_BRANCH} != "master" ]
 then
-  echo "This commit was made against the $TRAVIS_BRANCH. We only deploy on master."
+  echo "This commit was made against $TRAVIS_BRANCH. We only deploy on master."
   exit 0
 fi
 
@@ -21,5 +21,3 @@ git fetch
 git checkout ${TRAVIS_BRANCH}
 git commit --no-verify -a --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
 git push --quiet --set-upstream origin-es8-polyfill ${TRAVIS_BRANCH}
-
-echo "TRAVIS BRANCH: $TRAVIS_BRANCH"

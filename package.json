@@ -2,11 +2,12 @@
   "name": "es8-polyfill",
   "version": "0.1.0",
   "description":
-    "Contains all polyfills needed for features added in ECMAScript 2017",
+    "Contains polyfills needed for features added in ECMAScript 2017",
   "main": "lib/main.js",
   "repository": "https://github.com/brendenpalmer/es8-polyfill",
   "author": "Brenden Palmer <brendenpalmer@gmail.com>",
   "license": "MIT",
+  "keywords": ["polyfill", "es8", "ECMAScript 2017", "shim"],
   "scripts": {
     "build": "gulp --prod",
     "prettier": "./scripts/prettier.sh",

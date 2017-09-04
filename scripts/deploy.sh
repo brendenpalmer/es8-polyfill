@@ -20,11 +20,11 @@ git remote add origin-es8-polyfill https://${GH_TOKEN}@github.com/brendenpalmer/
 git fetch
 git checkout ${TRAVIS_BRANCH}
 
-if [[ $(git status --untracked-files=no --porcelain) ]]
+if [[ $(git status -uno --porcelain) ]]
 then
   git commit --no-verify -a --message "Update auto-generated files, travis CI build: $TRAVIS_BUILD_NUMBER [skip ci]"
   git push --quiet --set-upstream origin-es8-polyfill ${TRAVIS_BRANCH}
 else
-  echo "There are no changes so there is no need to update repo"
+  echo "There are no changes so there is no need to update the repository"
   exit 0;
 fi

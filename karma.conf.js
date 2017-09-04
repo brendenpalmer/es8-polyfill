@@ -30,7 +30,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browserDisconnectTolerance: 5,
-    browserNoActivityTimeout: 100000,
-    captureTimeout: 60 * 1000
+    browserNoActivityTimeout: 50000,
+    captureTimeout: 10000
   });
 };

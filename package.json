@@ -1,6 +1,6 @@
 {
   "name": "es8-polyfill",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.1",
   "description":
     "Contains polyfills needed for features added in ECMAScript 2017",
   "main": "lib/main.js",

@@ -16,5 +16,6 @@ deploy:
   provider: npm
   email: $DEPLOY_EMAIL
   api_key: $NPM_TOKEN
+  tag: next
   on:
     tags: true

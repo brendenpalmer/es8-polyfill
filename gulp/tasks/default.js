@@ -5,5 +5,5 @@ const sequence = require('gulp-sequence');
 
 gulp.task(
   'default',
-  sequence(['clean', 'lint', 'docs'], ['test', 'build'], 'uglify')
+  sequence(['clean', 'lint', 'docs'], ['test:single-run', 'build'], 'uglify')
 );

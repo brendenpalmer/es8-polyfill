@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
+const merge = require('merge2');
 const tsProject = ts.createProject('./tsconfig.json');
 
 gulp.task('build', () => {
@@ -9,5 +10,8 @@ gulp.task('build', () => {
     .src(['src/**/*.ts', '!src/**/*.spec.ts'])
     .pipe(tsProject());
 
-  return tsResult.js.pipe(gulp.dest('lib'));
+  return merge([
+    tsResult.js.pipe(gulp.dest('lib')),
+    tsResult.dts.pipe(gulp.dest('lib'))
+  ]);
 });

@@ -1,4 +1,5 @@
-const { argv } = require('yargs');
+'use strict';
+
 const ChromiumRevision = require('puppeteer/package.json').puppeteer
   .chromium_revision;
 const Downloader = require('puppeteer/utils/ChromiumDownloader');
@@ -6,11 +7,6 @@ const revisionInfo = Downloader.revisionInfo(
   Downloader.currentPlatform(),
   ChromiumRevision
 );
-const SINGLE_RUN = argv.singleRun ? argv.singleRun === 'true' : true;
-const COMPILER_OPTIONS = {
-  ...require('./tsconfig.json').compilerOptions,
-  module: 'commonjs'
-};
 
 process.env.CHROME_BIN = revisionInfo.executablePath;
 
@@ -25,7 +21,7 @@ module.exports = function(config) {
     reporters: ['progress', 'karma-typescript'],
     browsers: ['ChromeHeadless'],
     karmaTypescriptConfig: {
-      compilerOptions: COMPILER_OPTIONS
+      tsconfig: './tsconfig.json'
     },
     mime: {
       'text/x-typescript': ['ts', 'tsx']
@@ -33,7 +29,6 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    singleRun: SINGLE_RUN,
     browserDisconnectTolerance: 5,
     browserNoActivityTimeout: 100000,
     captureTimeout: 60 * 1000

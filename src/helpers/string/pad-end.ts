@@ -13,6 +13,7 @@ export function padEnd(
   targetLength: number = 0,
   padString: string = ' '
 ): string {
+  padString = String(padString);
   if (str.length > targetLength || !padString) {
     return str;
   } else {

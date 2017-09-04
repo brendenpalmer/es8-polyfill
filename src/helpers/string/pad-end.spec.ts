@@ -12,6 +12,11 @@ describe('Function: padEnd', () => {
     expect(padEnd(str, 6, 'test')).toEqual('testte');
   });
 
+  it('should handle null correctly', () => {
+    const str: string = 'test';
+    expect(padEnd(str, 8, null)).toEqual('testnull');
+  });
+
   it('should return the same string if it cannot be padded', () => {
     const str: string = 'test';
     expect(padEnd(str, 4, 'test')).toEqual(str);

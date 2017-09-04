@@ -13,3 +13,4 @@ gulp
 gulpfile.js
 karma.conf.js
 tsconfig.json
+docs

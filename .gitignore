@@ -5,3 +5,5 @@ node_modules
 coverage
 scripts/publish.sh
 yarn-error.log
+lib
+docs

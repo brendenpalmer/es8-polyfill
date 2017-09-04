@@ -14,7 +14,8 @@
     "lint": "gulp lint",
     "test": "gulp test",
     "docs": "gulp docs",
-    "pre-commit": "./scripts/pre-commit.sh"
+    "pre-commit": "./scripts/pre-commit.sh",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.54",
@@ -42,6 +43,7 @@
     "prettier": "^1.6.1",
     "pump": "^1.0.2",
     "puppeteer": "^0.10.1",
+    "standard-version": "^4.2.0",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.4.0",
     "typedoc": "^0.8.0",

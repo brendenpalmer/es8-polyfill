@@ -4,13 +4,13 @@ set -o errexit -o nounset
 
 if [ ${TRAVIS_PULL_REQUEST} != "false" ]
 then
-  echo "Skipping deploy because this is a PR build."
+  echo "Skipping deployment because this is a PR build"
   exit 0
 fi
 
 if [ ${TRAVIS_BRANCH} != "master" ]
 then
-  echo "This commit was made against $TRAVIS_BRANCH. We only deploy on master."
+  echo "This commit was made against $TRAVIS_BRANCH. Only builds on master will be deployed."
   exit 0
 fi
 

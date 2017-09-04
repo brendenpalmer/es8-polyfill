@@ -67,7 +67,7 @@ Look at the [gulp](https://github.com/brendenpalmer/es8-polyfill/tree/master/gul
 
 ## Documentation
 
-To serve the docs run the following:
+To build and serve the documentation run the following:
 
 ```
 gulp serve:docs

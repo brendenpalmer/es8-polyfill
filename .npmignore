@@ -1,0 +1,16 @@
+.tmp
+npm-debug.log
+npm-error.log
+node_modules
+coverage
+yarn-error.log
+scripts
+.prettierrc
+.travis.yml
+tslint.json
+src
+gulp
+gulpfile.js
+karma.conf.js
+tsconfig.json
+docs

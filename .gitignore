@@ -1,0 +1,10 @@
+.tmp
+npm-debug.log
+npm-error.log
+node_modules
+coverage
+scripts/publish.sh
+scripts/deploy.sh
+yarn-error.log
+lib
+docs

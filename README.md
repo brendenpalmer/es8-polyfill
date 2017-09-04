@@ -67,7 +67,11 @@ Look at the [gulp](https://github.com/brendenpalmer/es8-polyfill/tree/master/gul
 
 ## Documentation
 
-The built documentation will always be located here: [Documentation](https://github.com/brendenpalmer/es8-polyfill/tree/master/docs).
+To serve the docs run the following:
+
+```
+gulp serve:docs
+```
 
 ## Contributing
 

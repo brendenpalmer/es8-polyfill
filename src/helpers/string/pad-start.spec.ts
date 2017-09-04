@@ -28,6 +28,30 @@ describe('Function: padStart', () => {
     expect((str as any).padStart(8, void 0)).toEqual(expected);
   });
 
+  it('should handle an object correctly', () => {
+    const str: string = 'test';
+    const expected: string = '[object Object][test';
+    expect(padStart(str, 20, {} as any)).toEqual(expected);
+    expect((str as any).padStart(20, {})).toEqual(expected);
+  });
+
+  it('should handle an array correctly', () => {
+    const str: string = 'test';
+    const expected: string = 'test';
+    expect(padStart(str, 20, [] as any)).toEqual(expected);
+    expect((str as any).padStart(20, [])).toEqual(expected);
+  });
+
+  it('should handle a function correctly', () => {
+    const str: string = 'test';
+    const expected: string = 'function test() test';
+    const fn = function test() {
+      /* for testing */
+    };
+    expect(padStart(str, 20, fn as any)).toEqual(expected);
+    expect((str as any).padStart(20, fn)).toEqual(expected);
+  });
+
   it('should return the same string if it cannot be padded', () => {
     const str: string = 'test';
     expect(padStart(str, 4, 'test')).toEqual(str);

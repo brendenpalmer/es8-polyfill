@@ -12,6 +12,18 @@ describe('Function: values', () => {
     expect(values(obj)).toEqual([1, 2, 3]);
   });
 
+  it('should handle primitive types correctly', () => {
+    expect(values('')).toEqual([]);
+    expect(values(5)).toEqual([]);
+    expect(values(true)).toEqual([]);
+    expect(values(false)).toEqual([]);
+    expect(values(Symbol())).toEqual([]);
+  });
+
+  it('should handle non-empty strings correctly', () => {
+    expect(values('test')).toEqual(['t', 'e', 's', 't']);
+  });
+
   it('should be functionally equivalent to Object.values', () => {
     expect(values(window)).toEqual((Object as any).values(window));
 

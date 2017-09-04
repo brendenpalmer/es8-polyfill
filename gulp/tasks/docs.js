@@ -16,7 +16,7 @@ gulp.task('docs', () => {
         module: 'umd',
         out: './docs',
         name: 'ES8 Polyfill',
-        theme: 'minimal',
+        // theme: 'minimal',
         ignoreCompilerErrors: true,
         version: true
       })

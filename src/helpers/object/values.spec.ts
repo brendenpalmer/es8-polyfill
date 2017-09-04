@@ -1,4 +1,3 @@
-import { GlobalUtility } from './../../common/utils/global-util';
 import { ObjectUtility } from './../../common/utils/object-util';
 import { values } from './values';
 
@@ -14,12 +13,10 @@ describe('Function: values', () => {
   });
 
   it('should be functionally equivalent to Object.values', () => {
-    expect(values(GlobalUtility.global)).toEqual(
-      (Object as any).values(GlobalUtility.global)
-    );
+    expect(values(window)).toEqual((Object as any).values(window));
 
-    ObjectUtility.eachKey(GlobalUtility.global, (key: string) => {
-      const value = GlobalUtility.global[key];
+    ObjectUtility.eachKey(window, (key: string) => {
+      const value = window[key];
 
       if (value === undefined || value === null) {
         expect(() => {

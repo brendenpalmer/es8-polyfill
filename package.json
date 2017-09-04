@@ -50,5 +50,10 @@
     "typescript": "^2.5.2",
     "yargs": "^8.0.2"
   },
-  "pre-commit": ["pre-commit"]
+  "pre-commit": ["pre-commit"],
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
+  }
 }

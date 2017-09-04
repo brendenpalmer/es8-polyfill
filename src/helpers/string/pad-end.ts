@@ -13,15 +13,19 @@ export function padEnd(
   targetLength: number = 0,
   padString: string = ' '
 ): string {
-  padString = String(padString);
-  if (str.length > targetLength || !padString) {
+  const padStringToString: string = String(padString);
+  if (
+    str.length > targetLength ||
+    !padStringToString ||
+    padString === undefined
+  ) {
     return str;
   } else {
     const diff: number = targetLength - str.length;
-    const timesToPad: number = Math.ceil(diff / padString.length);
-    return `${str}${StringUtility.repeat(padString, timesToPad).substring(
-      0,
-      diff
-    )}`;
+    const timesToPad: number = Math.ceil(diff / padStringToString.length);
+    return `${str}${StringUtility.repeat(
+      padStringToString,
+      timesToPad
+    ).substring(0, diff)}`;
   }
 }

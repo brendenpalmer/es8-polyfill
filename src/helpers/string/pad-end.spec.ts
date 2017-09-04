@@ -14,7 +14,18 @@ describe('Function: padEnd', () => {
 
   it('should handle null correctly', () => {
     const str: string = 'test';
-    expect(padEnd(str, 8, null)).toEqual('testnull');
+    const expected: string = 'testnull';
+    expect(padEnd(str, 8, null)).toEqual(expected);
+    expect((str as any).padEnd(8, null)).toEqual(expected);
+  });
+
+  it('should handle undefined correctly', () => {
+    const str: string = 'test';
+    const expected: string = 'test    ';
+    expect(padEnd(str, 8, undefined)).toEqual(expected);
+    expect(padEnd(str, 8, void 0)).toEqual(expected);
+    expect((str as any).padEnd(8, undefined)).toEqual(expected);
+    expect((str as any).padEnd(8, void 0)).toEqual(expected);
   });
 
   it('should return the same string if it cannot be padded', () => {
